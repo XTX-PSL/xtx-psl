@@ -65,8 +65,8 @@ function createControlPanel() {
     panel.id = 'music-control-panel';
     panel.style.cssText = `
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 5px;
+        left: 5px;
         background: rgba(0, 0, 0, 0.8);
         color: white;
         padding: 10px 15px;
@@ -360,4 +360,5 @@ window.controlBackgroundMusic = {
             controls.muteBtn.click();
         }
     }
+
 };
