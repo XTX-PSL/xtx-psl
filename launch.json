@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试 C/C++ 程序", // 配置名称，启动调试时会显示
+            "type": "cppdbg", // 使用 Microsoft C++ 扩展
+            "request": "launch", // launch = 启动调试，attach = 附加到进程
+            "program": "${workspaceFolder}/1.exe", // 要调试的可执行文件路径
+            "args": [], // 传递给程序的命令行参数
+            "stopAtEntry": false, // 是否在程序入口暂停
+            "cwd": "${workspaceFolder}", // 调试时的工作目录
+            "environment": [], // 环境变量设置
+            "externalConsole": false, // 是否弹出外部终端
+            "MIMode": "gdb", // 调试器模式：gdb/lldb
+            "miDebuggerPath": "E:\\CodeBlocks\\MinGW\\bin\\gdb.exe", // gdb 的路径（Windows 下可能是 "C:/MinGW/bin/gdb.exe"）
+            "setupCommands": [
+                {
+                    "description": "启用 gdb 的漂亮打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+        //控制台输出结果显示中文的命令:chcp 65001             # 设置控制台代码页为 UTF-8
+        //                          $OutputEncoding = [Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
+    ]
+}
